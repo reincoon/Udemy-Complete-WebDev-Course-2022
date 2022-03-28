@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Positioning</title>
+        <style>
+            .bluebox{
+                background-color: #3a5795;
+                color: white;
+                height: 100px;
+                width: auto;
+                position: fixed;
+                top: 30px;
+                left: 30px;
+                z-index: 1;
+            }   
+            .yellowbox{
+                background-color: rgb(224, 222, 85);
+                height: 100px;
+                width: auto;
+                position: relative;
+                top: 20px;
+                left: 20px;
+                /* 
+                z-index: number; is needed to show which object will be in front if they are overlapping. the highest number will be in front.
+                */
+                z-index: 2;
+            }   
+            .greenbox{
+                background-color: #31af37;
+                height: 100px;
+                width: auto;
+                position: absolute;
+                top: 40px;
+                left: 40px;
+            }      
+        </style>
+    </head>
+    <body>
+        <div class="bluebox">
+            <p>Facebook is a <span class="great">social net</span>.</p>
+        </div>
+        <div class="yellowbox">
+            <p>Apple.</p>
+        </div>
+        <div class="greenbox">
+            <p>Microsoft.</p>
+        </div>
+    </body>
+</html>
