@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Gradients</title>
+        <style>
+            .bluebox{
+                /*background-color: #3a5795;*/
+                color: white;
+                height: 100px;
+                width: auto;
+                /*First background is used that it works in Google Chrom, 
+                second syntax is used for Safari
+                third is for Opera
+                fourth is for Firefox*/
+                /*background: linear-gradient(blue, white);
+                background: -webkit-linear-gradient(blue, white);
+                background: -o-linear-gradient(blue, white);
+                background: -moz-linear-gradient(blue, white);*/
+
+                /*You can add more than two colours to gradient*/
+                    /*background: linear-gradient(blue, white, orange);*/
+                /*Or you can change direction of gradient from right to left and not from top to bottom*/
+                    /*background: linear-gradient(to left, blue, white);*/
+                /*We can rotate anticlockwise by some degrees*/
+                    /*background: linear-gradient(90deg, blue, white);*/
+                /*We can make opacity, more transparent colour on one side and clear colour on another side*/
+                    /*background: linear-gradient(to left, rgba(0, 0, 255, 0), rgba(0, 0, 255, 1));*/
+                    background: radial-gradient(circle, blue 5%, white 15%, orange 80%);
+            }   
+            .yellowbox{
+                background-color: rgb(224, 222, 85);
+                height: 100px;
+                width: auto;
+            }   
+            .greenbox{
+                background-color: #31af37;
+                height: 100px;
+                width: auto;
+            }   
+            .great{
+                background-color: blueviolet;
+            }   
+        </style>
+    </head>
+    <body>
+        <div class="bluebox">
+            <p>Facebook.</p>
+        </div>
+        <div class="yellowbox">
+            <p>Apple.</p>
+        </div>
+        <div class="greenbox">
+            <p>Microsoft.</p>
+        </div>
+    </body>
+</html>
