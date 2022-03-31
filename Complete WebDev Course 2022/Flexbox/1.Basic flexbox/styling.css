@@ -1,0 +1,25 @@
+/*Make sure the dimentions of any box includes its border and padding, this gives an easy way of sizing the elements.*/
+/*Using the star means we use all elements*/
+* {
+    box-sizing: border-box;
+}
+
+/*Style the container*/
+.container{
+    background-color: salmon;
+    height: 200px;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+/*Style divs inside the container*/
+.container > div{
+    background-color: rgb(254, 181, 153);
+    color:lavenderblush;
+    text-align: center;
+    padding: 20px;
+    margin: 1px;
+    border: 3px rgb(221, 111, 74) solid;
+}
