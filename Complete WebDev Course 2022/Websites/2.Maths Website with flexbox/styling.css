@@ -1,0 +1,186 @@
+body{
+    font: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+*{
+    box-sizing: border-box;
+}
+#container{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+#header{
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+#brand{
+    flex: 50%;
+}
+h1 a{
+    font-size: 50px;
+    font-weight: 100;
+    color: steelblue;
+    text-decoration: none;
+}
+#searchBox{
+    flex: 50%;
+    background: linear-gradient(darkslateblue, midnightblue);
+    background: -webkit-linear-gradient(darkslateblue, midnightblue);
+    background: -o-linear-gradient(darkslateblue, midnightblue);
+    background: -moz-linear-gradient(darkslateblue, midnightblue);
+    min-width: 500px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text{
+    float: left;
+    width: 200px;
+    padding: 5px;
+    font-size: 15px;
+    color: orchid;
+    background: white url(images/search.png) right center no-repeat;
+    border: 1px solid #ba93fa;
+}
+.submit{
+    float: right;
+    padding: 5px;
+    font-weight: bold;
+    color: azure;
+    background: steelblue;
+    font-size: 15px;
+}
+.clear{
+    clear: both;
+}
+#menu{
+    background: linear-gradient(rgb(122, 163, 238), rgb(63, 118, 219));
+    background: -webkit-linear-gradient(rgb(122, 163, 238), rgb(63, 118, 219));
+    background: -o-linear-gradient(rgb(122, 163, 238), rgb(63, 118, 219));
+    background: -moz-linear-gradient(rgb(122, 163, 238), rgb(63, 118, 219));
+    padding: 16px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#menu a{
+    padding: 0 50px;
+    height: 30px;
+    border-right: 1px solid rgb(54, 42, 129);
+}
+#menu a:last-child{
+    border-right: none;
+}
+#menu a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: rgb(54, 42, 129);
+    line-height: 30px;
+    transition: font-size 0.3s ease;
+    -webkit-transition: font-size 0.3s ease;
+    -moz-transition: font-size 0.3s ease;
+    -o-transition: font-size 0.3s ease;
+    -ms-transition: font-size 0.3s ease;
+}
+#menu a:hover, #menu a.active{
+    font-size: 20px;
+    font-weight: bold;
+    color: darkmagenta;
+}
+/*small screens: vertical menu*/
+@media screen and (max-width: 700px){
+    #menu{
+        /* background: linear-gradient(rgb(122, 163, 238), rgb(63, 118, 219));
+        background: -webkit-linear-gradient(rgb(122, 163, 238), rgb(63, 118, 219));
+        background: -o-linear-gradient(rgb(122, 163, 238), rgb(63, 118, 219));
+        background: -moz-linear-gradient(rgb(122, 163, 238), rgb(63, 118, 219)); */
+        flex-direction: column;
+        align-content: center;
+    } 
+    #menu a{
+        border-right: none;
+    }
+}
+#introduction{
+    background: linear-gradient(rgb(206, 243, 255), rgb(240, 136, 236));
+    background: -webkit-linear-gradient(rgb(206, 243, 255), rgb(240, 136, 236));
+    background: -o-linear-gradient(rgb(206, 243, 255), rgb(240, 136, 236));
+    background: -moz-linear-gradient(rgb(206, 243, 255), rgb(240, 136, 236));
+    padding: 40px;
+    margin: 15px 0;
+}
+#introduction h3{
+    font-size: 45px;
+    color: indigo;
+    font-weight: normal;
+}
+#introduction p{
+    font-size: 25px;
+    color: rgb(120, 31, 204);
+    text-align: justify;
+}
+/*sidebars*/
+.sidebars{
+    display: flex;
+    flex-wrap: wrap;
+}
+.sidebarWrapper{
+    padding: 5px;
+    flex: 50%;
+}
+.sidebar{
+    height: 100%;
+    width: 100%;
+    border: 1px solid rgb(240, 136, 236);
+    border-radius: 20px;
+    padding: 20px 40px;
+    flex: 50%;
+}
+
+.sidebar h3{
+    color: indigo;
+    font-size: 40px;
+}
+.sidebar ul{
+    padding-top: 8px;
+}
+#leftsidebar ul li{
+    padding: 4px 0 4px 12px;
+    list-style-image: url(images/arrow.png);
+}
+#rightsidebar ul li{
+    padding: 20px 0 20px 50px;
+    background: url(images/tick.png) no-repeat left center;
+}
+.sidebar ul li a{
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(54, 42, 129);
+    transition: font-size 0.3s ease;
+    -webkit-transition: font-size 0.3s ease;
+    -moz-transition: font-size 0.3s ease;
+    -o-transition: font-size 0.3s ease;
+    -ms-transition: font-size 0.3s ease;
+}
+.sidebar ul li a:hover, .sidebar ul li a.active{
+    text-decoration: none;
+    color: darkmagenta;
+    font-size: 27px;
+    font-weight: bold;
+}
+.footer{
+    height: 60px;
+    background: linear-gradient(rgb(190, 211, 252), rgb(121, 165, 248));
+    background: -webkit-linear-gradient(rgb(190, 211, 252), rgb(121, 165, 248));
+    background: -o-linear-gradient(rgb(190, 211, 252), rgb(121, 165, 248));
+    background: -moz-linear-gradient(rgb(190, 211, 252), rgb(121, 165, 248));
+    padding: 10px 30px;
+    margin-top: auto;
+}
