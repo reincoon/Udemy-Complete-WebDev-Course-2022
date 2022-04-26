@@ -8,7 +8,7 @@
     background-color: #07575B;
     display: grid;
     grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: 20% 100px 2fr minmax(200px, 1fr);
+    grid-template-columns: [col1-left] 20% 100px 2fr minmax(200px, 1fr);
     grid-gap: 5px;
     padding: 7px;
 
@@ -25,13 +25,19 @@ div{
 
 
 #apple{
-    grid-area: apple;
+    /* grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 3;
+    grid-column-end: 3; */
+    /*the above is equal to the code below*/
+    grid-area: 1/col1-left/3/3;
 }
 #facebook{
-    grid-area: facebook;
+    /*by default it occupies 1 cell, no need to specify end point*/
+    grid-area: 3/3;
 }
 #microsoft{
-    grid-area: microsoft;
+    grid-area: 3/1/span 2/ span 2;
 }
 #samsung{
     grid-area: samsung;
